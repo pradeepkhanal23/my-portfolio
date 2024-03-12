@@ -6,112 +6,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/media-queries.css" />
     <title>My Portfolio</title>
   </head>
   <body>
     <header>
-      <h1>Lernantino</h1>
+      <h1>Pradeep.K</h1>
       <nav>
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#work">Work</a></li>
-          <li><a href="#contact">Contact Me</a></li>
-          <li><a href="#resume">Resume</a></li>
-        </ul>
+        <a href="#">About Me</a>
+        <a href="#">Work</a>
+        <a href="#">Contact Me</a>
+        <a href="#">Resume</a>
       </nav>
-      <main>
-        <section class="hero">
-          <p>Cool subtitle here!</p>
-        </section>
-        <section class="about" id="about">
-          <h2>About Me</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
-            nulla quidem aliquam animi officiis molestiae accusamus tempora
-            dolores suscipit ratione.Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Amet a ratione voluptatibus officia labore
-            accusantium atque eligendi in ipsa aspernatur.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet a
-            ratione voluptatibus officia labore accusantium atque eligendi in
-            ipsa aspernatur.Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Amet a ratione voluptatibus officia labore accusantium atque
-            eligendi in ipsa aspernatur.
-          </p>
-        </section>
-        <section class="work" id="work">
-          <h2>Work</h2>
+    </header>
+    <main>
+      <section class="hero">
+        <p>bringing design to life</p>
+      </section>
+      <section class="about" id="about">
+        <div class="wrapper">
+          <h2 class="text-center">
+            About Me
+            <span class="underline"></span>
+          </h2>
+          <article class="about-me">
+            <p>
+              As a Web Developer, I love to create unique looking web
+              application.I am a frontend Developer with a passion for building
+              beautiful and dynamic web applications.
+            </p>
+            <br />
+            <p>
+              I am also a React developer, I love to build an application on
+              React.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section class="work" id="work">
+        <div class="wrapper">
+          <h2 class="text-center">Work</h2>
           <div class="projects">
-            <article>
-              <figure>
+            <article class="project">
+              <figure class="project-img">
                 <img
                   src="./assets/images/splitter.png"
                   alt="splitter project image"
                 />
-                <figcaption>Splitter</figcaption>
               </figure>
-              <p>React / JS / CSS</p>
+              <div class="project-info">
+                <figcaption>Splitter</figcaption>
+                <p>React/JS/CSS</p>
+              </div>
+              <div class="overlay"></div>
             </article>
-            <article>
-              <figure>
+            <article class="project">
+              <figure class="project-img">
                 <img
                   src="./assets/images/calorie-tracker.png"
                   alt="calorie tracker project image"
                 />
-                <figcaption>Calorie Tracker</figcaption>
               </figure>
-              <p>HTML / CSS / JS / Bootstrap5</p>
+              <div class="project-info">
+                <figcaption>Calorie Tracker</figcaption>
+                <p>HTML / CSS / JS / Bootstrap5</p>
+              </div>
             </article>
-            <article>
-              <figure>
+            <article class="project">
+              <figure class="project-img">
                 <img
                   src="./assets/images/JS-clock.png"
                   alt="javascript clock project image"
                 />
-                <figcaption>JS Analog Clock</figcaption>
               </figure>
-              <p>HTML / CSS / JS / Canvas API</p>
+              <div class="project-info">
+                <figcaption>JS Analog Clock</figcaption>
+                <p>HTML / CSS / JS / Canvas API</p>
+              </div>
             </article>
-            <article>
-              <figure>
+            <article class="project">
+              <figure class="project-img">
                 <img
                   src="./assets/images/quote-generator.png"
                   alt="quote generator project image"
                 />
-                <figcaption>Quote Generator</figcaption>
               </figure>
-              <p>HTML / CSS / React / API</p>
+              <div class="project-info">
+                <figcaption>Quote Generator</figcaption>
+                <p>HTML / CSS / React / API</p>
+              </div>
             </article>
-            <article>
-              <figure>
+            <article class="project">
+              <figure class="project-img">
                 <img
                   src="./assets/images/countdown.png"
                   alt="countdown timer project image"
                 />
-                <figcaption>Countdown Timer</figcaption>
               </figure>
-              <p>HTML / CSS / JS</p>
+              <div class="project-info">
+                <figcaption>Countdown Timer</figcaption>
+                <p>HTML / CSS / JS</p>
+              </div>
             </article>
           </div>
-        </section>
-        <section class="contact" id="contact">
-          <h2>Contact Me</h2>
-          <div>
-            <ul>
-              <li>(+61) 0345 632 623</li>
-              <li>
-                <a href="mailto:pradeepkhanal642@example.com"
-                  >pradeepkhanal642@gmail.com</a
-                >
-              </li>
-              <li><a href="https://github.com/pradeepkhanal23">Github</a></li>
-              <li>Twitter</li>
-              <li>Spotify</li>
-            </ul>
-          </div>
-        </section>
-      </main>
-    </header>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <div>
+          <ul>
+            <li>(+61) 0345 632 623</li>
+            <li>
+              <a href="mailto:pradeepkhanal642@example.com"
+                >pradeepkhanal642@gmail.com</a
+              >
+            </li>
+            <li><a href="https://github.com/pradeepkhanal23">Github</a></li>
+            <li>Twitter</li>
+            <li>Spotify</li>
+          </ul>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

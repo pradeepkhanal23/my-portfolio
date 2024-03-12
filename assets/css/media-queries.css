@@ -1,0 +1,9 @@
+/* CSS media queries */
+
+/* Small screens */
+@media only screen and (min-width: 767px) {
+  /* Your CSS rules for small screens */
+  body {
+    background-color: blue;
+  }
+}
