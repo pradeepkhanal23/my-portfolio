@@ -3,14 +3,46 @@
 /* Small screens */
 @media only screen and (min-width: 800px) {
   /* Your CSS rules for small screens */
+
+  section .wrapper h2 {
+    border-right: 0.3rem solid var(--secondary-color);
+    margin: 0;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding-right: 0.8rem;
+  }
+
   .wrapper {
     grid-template-columns: 200px auto;
+    width: 100%;
+  }
+
+  header {
+    flex-direction: row;
+  }
+
+  header h1 {
+    margin-bottom: 0;
+  }
+
+  header nav {
+    flex-direction: row;
+    margin-top: 0;
+    justify-content: flex-end;
+  }
+
+  .work h2 {
+    text-align: center;
   }
 
   .projects {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 350px 150px 150px;
     column-gap: 1rem;
+    width: 100%;
   }
 
   .project-1 {
@@ -38,5 +70,11 @@
 
   .project-info p {
     font-size: 0.6rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .wrapper {
+    width: 70%;
   }
 }
