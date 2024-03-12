@@ -14,36 +14,25 @@
 }
 
 .wrapper {
-  max-width: 100%;
-  margin: 0rem auto;
+  max-width: 90%;
+  margin: 1rem auto;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 /* element selectors */
+html {
+  scroll-behavior: smooth; /* adds smooth scrolling in the page  */
+}
 a {
   text-decoration: none;
 }
 
 h2 {
-  position: relative;
-  margin-bottom: 2rem;
   font-size: 2rem;
   color: var(--secondary-color);
-}
-
-h2::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  margin: -0.3rem auto;
-  background-color: #333;
+  margin-bottom: 1rem;
 }
 
 header {
@@ -51,7 +40,6 @@ header {
   background-color: var(--dark);
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 header h1 {
@@ -115,11 +103,11 @@ header nav a:hover::before {
 
 .hero p {
   position: absolute;
-  bottom: 50%;
-  left: 0;
+  bottom: 10%;
+  right: 5%;
   background-color: var(--primary-color);
   font-size: 1.7rem;
-  padding: 0.7rem;
+  padding: 0.5rem;
   text-transform: capitalize;
 }
 
@@ -132,35 +120,25 @@ header nav a:hover::before {
 }
 
 .projects {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1.5rem;
 }
 
 .project {
   cursor: pointer;
   position: relative;
-  border: 3px solid var(--primary-color);
+  border: 5px solid var(--primary-color);
 }
 
-/* Initially, set the overlay to be transparent */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background-color: transparent; /* Initially transparent */
-  opacity: 0;
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
-}
-
-/* When hovering over the project, darken the overlay */
-.project:hover .overlay {
-  background-color: black; /*Dark background color*/
-  opacity: 0.4; /* Partially opaque */
+.project figure {
+  height: 100%;
+  width: auto;
 }
 
 .project figure img {
   object-fit: cover;
-  height: auto;
+  height: 100%;
   width: 100%;
 }
 
@@ -168,23 +146,41 @@ header nav a:hover::before {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   bottom: 10%;
   left: 0;
-  height: 80px;
-  width: 40%;
+  height: 4rem;
+  width: 50%;
   background-color: var(--primary-color);
   padding: 0.5rem;
   z-index: 1;
 }
 
 .project-info figcaption {
+  font-size: 1.3rem;
   margin-bottom: 0.3rem;
 }
 
 .project-info p {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Initially, set the overlay to be transparent */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: black; /*Dark background color*/
+  opacity: 0.4; /* Partially opaque */
+
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+/* When hovering over the project, darken the overlay */
+.project:hover .overlay {
+  background-color: transparent; /* Initially transparent */
+  opacity: 0;
 }
 
 .contact {

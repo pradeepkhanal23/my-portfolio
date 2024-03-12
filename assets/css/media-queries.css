@@ -1,9 +1,42 @@
 /* CSS media queries */
 
 /* Small screens */
-@media only screen and (min-width: 767px) {
+@media only screen and (min-width: 800px) {
   /* Your CSS rules for small screens */
-  /* body {
-    background-color: blue;
-  } */
+  .wrapper {
+    grid-template-columns: 200px auto;
+  }
+
+  .projects {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 350px 150px 150px;
+    column-gap: 1rem;
+  }
+
+  .project-1 {
+    grid-column: span 12;
+    grid-row: span 1;
+  }
+
+  .project-2 {
+    grid-column: span 6;
+  }
+  .project-3 {
+    grid-column: span 6;
+  }
+
+  .project-4 {
+    grid-column: span 6;
+  }
+  .project-5 {
+    grid-column: span 6;
+  }
+
+  .project-info figcaption {
+    font-size: 1rem;
+  }
+
+  .project-info p {
+    font-size: 0.6rem;
+  }
 }
