@@ -26,9 +26,11 @@ a {
 }
 
 h2 {
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 2rem;
   color: var(--secondary-color);
+  width: 100%;
 }
 
 header {
@@ -135,7 +137,7 @@ header nav a:hover::before {
 
 /* When hovering over the project, darken the overlay */
 .project:hover .overlay {
-  background-color: black; /* Dark background color */
+  background-color: black; /*Dark background color*/
   opacity: 0.4; /* Partially opaque */
 }
 
