@@ -25,7 +25,7 @@
   /* the header now turned to row direction for navigation like structure in medium screen devices */
   header {
     flex-direction: row;
-    padding-bottom: 0;
+    padding-bottom: 0.5rem;
   }
 
   .banner {
