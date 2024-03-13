@@ -3,8 +3,9 @@
   --white: #f5f5f5;
   --dark: #333;
   --primary-color: #92cacd;
-  --secondary-color: #5a6a85;
+  --secondary-color: #414c60;
   --gray: rgb(98, 95, 95);
+  --paragraph-color: #818e95;
 }
 
 /* utility classes */
@@ -13,6 +14,7 @@
   text-align: center;
 }
 
+/* wrapper utility class to control ta consistency of the page in every section */
 .wrapper {
   width: 100%;
   margin: 0rem auto;
@@ -82,6 +84,8 @@ header nav a {
   margin-inline: 0.5rem;
 }
 
+/* adding pseudo element under the <a> tag to create the underline like design */
+
 header nav a::before {
   content: "";
   position: absolute;
@@ -92,6 +96,7 @@ header nav a::before {
   background-color: var(--primary-color);
 }
 
+/* creating simple underline effect in small devices using normal text decoration underline css property */
 section .wrapper h2 {
   text-align: center;
   margin-bottom: 2rem;
@@ -111,6 +116,7 @@ section .wrapper h2 {
   position: relative;
 }
 
+/* subtitle text position adjustment based on hero container itself */
 .hero p {
   position: absolute;
   bottom: 10%;
@@ -127,8 +133,10 @@ section .wrapper h2 {
 }
 .about p {
   color: var(--secondary-color);
+  line-height: 1.3;
 }
 
+/* creating a grid layout to centrally have only 1 column to begin with for a mobile responsive first layout approach */
 .projects {
   display: grid;
   grid-template-columns: 1fr;
@@ -143,27 +151,35 @@ section .wrapper h2 {
   border: 5px solid var(--primary-color);
 }
 
-.project figure {
+.project a {
+  color: var(--dark);
+}
+
+/* container to contain the image inside */
+.project .project-img {
   height: 100%;
   width: auto;
 }
 
-.project figure img {
-  object-fit: cover;
+/* image allowed to expand its parent's height and width */
+.project .project-img img {
   height: 100%;
   width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
 }
 
+/* project information positioned based on its position of it's closest parent */
 .project-info {
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   bottom: 10%;
   left: 0;
   height: 4rem;
-  width: 50%;
+  width: 13rem;
   background-color: var(--primary-color);
   padding: 0.5rem;
   z-index: 1;
@@ -171,12 +187,12 @@ section .wrapper h2 {
 
 .project-info figcaption {
   font-size: 1.3rem;
-  margin-bottom: 0.3rem;
 }
 
 .project-info p {
-  font-size: 0.8rem;
-  line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: var(--secondary-color);
 }
 
 /* Initially, set the overlay to be transparent */
@@ -184,15 +200,18 @@ section .wrapper h2 {
   position: absolute;
   inset: 0;
   background-color: black; /*Dark background color*/
-  opacity: 0.4; /* Partially opaque */
-
+  opacity: 0.6; /* Partially opaque */
   transition: opacity 0.3s ease; /* Smooth transition for opacity */
 }
 
-/* When hovering over the project, darken the overlay */
+/* When hovering over the project, lighten the overlay */
 .project:hover .overlay {
   background-color: transparent; /* Initially transparent */
-  opacity: 0;
+  opacity: 0; /* removing the opacity effect for clear image view */
+}
+
+.contact {
+  margin-bottom: 2rem;
 }
 
 .contact ul {

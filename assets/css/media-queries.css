@@ -1,12 +1,10 @@
 /* CSS media queries */
 
-/* Small screens */
-@media only screen and (min-width: 800px) {
-  /* Your CSS rules for small screens */
-
+/* Medium screens */
+@media only screen and (min-width: 850px) {
   section .wrapper h2 {
-    border-right: 0.3rem solid var(--secondary-color);
-    margin: 0;
+    border-right: 0.3rem solid var(--secondary-color); /*we added a border right in the h2 for medium and above screen sizes */
+    margin: 0; /* reset the margin for more control*/
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -15,11 +13,16 @@
     padding-right: 0.8rem;
   }
 
+  /* Now the wrapper turned into 2 column layout, where the first is used by h2 tags and second for its respective content
+   i.e About (column1)-> About me paragraph (Column2)
+   i.e Works (column1)-> Projects Section (Column2)
+   i.e Contact Me (column1)-> Contact Me section (Column2)
+  */
   .wrapper {
-    grid-template-columns: 200px auto;
-    width: 100%;
+    grid-template-columns: 150px auto;
   }
 
+  /* the header now turned to row direction for navigation like structure in medium screen devices */
   header {
     flex-direction: row;
   }
@@ -28,6 +31,7 @@
     margin-bottom: 0;
   }
 
+  /* pushing the nav elements at the end of the header */
   header nav {
     flex-direction: row;
     margin-top: 0;
@@ -38,43 +42,34 @@
     text-align: center;
   }
 
+  /* separate grid layout for projects having fixed columns and rows */
   .projects {
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 350px 150px 150px;
+    grid-template-rows: 300px 150px 150px;
     column-gap: 1rem;
     width: 100%;
   }
 
+  /* first project taking up the full width */
   .project-1 {
     grid-column: span 12;
     grid-row: span 1;
   }
 
-  .project-2 {
-    grid-column: span 6;
-  }
-  .project-3 {
-    grid-column: span 6;
-  }
-
-  .project-4 {
-    grid-column: span 6;
-  }
+  /* other projects taking half width in medium and above */
+  .project-2,
+  .project-3,
+  .project-4,
   .project-5 {
     grid-column: span 6;
   }
-
-  .project-info figcaption {
-    font-size: 1rem;
-  }
-
-  .project-info p {
-    font-size: 0.6rem;
-  }
 }
 
+/* Larger screen and above */
+
+/* wrapper's width reduced to have a compact view in the larger screen */
 @media only screen and (min-width: 1200px) {
   .wrapper {
-    width: 70%;
+    width: 80%;
   }
 }
