@@ -25,10 +25,25 @@
   /* the header now turned to row direction for navigation like structure in medium screen devices */
   header {
     flex-direction: row;
+    padding-bottom: 0;
+  }
+
+  .banner {
+    padding: 0rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 40%;
+  }
+
+  header img {
+    display: block;
   }
 
   header h1 {
     margin-bottom: 0;
+    width: 200px;
+    margin-inline: 0;
   }
 
   /* pushing the nav elements at the end of the header */
